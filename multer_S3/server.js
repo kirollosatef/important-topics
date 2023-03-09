@@ -2,15 +2,17 @@ import express from "express";
 import multer from "multer";
 import mongoose from "mongoose";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const port = 3000;
 const memoryStorage = multer.memoryStorage();
 const upload = multer({ storage: memoryStorage });
-const AWS_BUCKET_NAME = "erp-api-multer-s3-bucket";
-const AWS_BUCKET_REGION = "eu-north-1";
-const AWS_IAM_USER_KEY = "AKIAYIPAX2XEITREQUOS";
-const AWS_IAM_USER_SECRET = "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";
+const AWS_BUCKET_NAME = process.env.AWS_BUCKET_NAME;
+const AWS_BUCKET_REGION = process.env.AWS_BUCKET_REGION;
+const AWS_IAM_USER_KEY = process.env.AWS_IAM_USER_KEY;
+const AWS_IAM_USER_SECRET = process.env.AWS_IAM_USER_SECRET;
 
 app.use(express.json());
 
