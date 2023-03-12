@@ -1,0 +1,28 @@
+// redis is a key-value store that can be used as a database, cache and message broker
+  1- (set or SET) kye val::::::::::::::::::::// set key value pair
+  2- (get or GET) key::::::::::::::::::::::::// get value of key
+  3- (del or DEL) key::::::::::::::::::::::::// delete key
+  4- (exists or EXISTS) key::::::::::::::::::// check if key exists
+  5- (keys or KEYS) pattern::::::::::::::::::// get all keys matching pattern
+  6- (flushall)::::::::::::::::::::::::::::::// delete all keys
+  7- (ttl or TTL) key::::::::::::::::::::::::// get time to live of key
+  8- (expire or EXPIRE) key seconds::::::::::// set time to live of key
+  9- (setex) key seconds value:::::::::::::::// set key value pair with time to live
+// lists are ordered collections of strings
+  10- lpush key value::::::::::::::::::::::::// push value to list from left
+  11- rpush key value::::::::::::::::::::::::// push value to list from right
+  12- lpop key:::::::::::::::::::::::::::::::// pop value from list
+  13- rpop key:::::::::::::::::::::::::::::::// pop value from list
+  14- lrange key start end:::::::::::::::::::// get range of list
+// sets are unordered collections of unique strings
+  15- sadd key value:::::::::::::::::::::::::// add value to set
+  16- srem key value:::::::::::::::::::::::::// remove value from set
+  17- smembers key:::::::::::::::::::::::::::// get all values of set
+// hashes are maps between string fields and string values
+  18- hset key field value:::::::::::::::::::// set value of field in hash
+  19- hget key field::::::::::::::::::::::::// get value of field in hash
+  20- hgetall key:::::::::::::::::::::::::::// get all values of hash
+  20- hdel key field::::::::::::::::::::::::// delete field in hash
+  21- hkeys key:::::::::::::::::::::::::::::// get all fields of hash
+  22- hexists key field::::::::::::::::::::::// check if field exists in hash
+23- quit:::::::::::::::::::::::::::::::::::// quit
